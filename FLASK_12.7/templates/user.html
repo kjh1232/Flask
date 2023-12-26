@@ -1,0 +1,22 @@
+<html>
+   <body>
+      <form action = "{{ url_for('user_info') }}" method = "POST">
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               <script>
+                  alert("{{messages[-1]}}")
+               </script>
+            {%endif%}
+      {%endwith%}
+         <h3>로그인</h3>
+         아이디<br>
+         <input type = "text" name = "id" /></br>
+
+         비밀번호<br>
+         <input type = "password" name = "pwd" /><br>
+         <input type = "submit" value = "로그인" /><br>
+      </form>
+
+
+   </body>
+</html>
