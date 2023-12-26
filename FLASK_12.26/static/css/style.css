@@ -1,0 +1,40 @@
+body {
+    text-align: left;
+}
+
+table, th, td{
+    border : 1px solid rgb(233, 132, 132);
+}
+
+
+
+header{
+    border-bottom : 1px solid gray;
+    background-color: rgb(255, 191, 191);
+
+}
+
+header h1{
+    padding:10px;
+}
+
+
+nav { border-right : 1px solid gray;
+      height:1000px;
+      width:200px;
+      float:left;
+}
+
+nav ol{
+    list-style:none;
+}
+
+article{
+    float:left;
+    padding:20px;
+    text-align: center;
+}
+
+article h4{
+    text-align: left;
+}

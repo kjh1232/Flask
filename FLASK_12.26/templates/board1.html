@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>게시판</title>
+ 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+        
+    </style>
+</head>
+ 
+<body>
+
+    <header><h1>게시판</h1></header>
+    <nav>
+        <ol>
+            <li><a href="{{url_for('logout')}}">로그아웃</a></li><br>
+            <li><a href="{{url_for('add')}}">추가</a></li>
+        </ol>
+    </nav>
+    <article>
+        <h4>목록</h4>
+        <table border=1 width="600" align="left">
+            <thead>
+                
+                <td>아이디</td>
+                <td>내용</td>
+                <td>수정/삭제</td>
+            </thead>
+
+            {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <script>
+                                alert("{{messages[-1]}}")
+                            </script>
+                        {%endif%}
+                    {%endwith%}
+            {% for row in contents %}
+
+            <tr>
+                
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+
+                <td><a href="{{url_for('update', uid = row[0],uname=row[1])}}">수정</a> 
+                    <a href="{{url_for('delete', uid = row[0], uname=row[1])}}">삭제</a></td>
+            
+            </tr>
+            {% endfor %}
+        </table>
+
+    </article>
+
+
+    
+    
+</body>
+ 
+</html>
