@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>게시판</title>
+ 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+        
+    </style>
+</head>
+ 
+<body>
+    <h3>상세내용</h3>
+    <form action="" method="POST">
+
+        제목<br>
+        {{ hang[0][2] }} <br><br>
+
+        이름<br>
+        {{ hang[0][0] }} <br><br>
+
+        내용<br>
+        {{ hang[0][1] }} <br><br>
+
+
+        <button type = "button" onclick="window.location.href='/list'">게시판 </button><br>
+
+    </form>
+
+</body>
+ 
+</html>

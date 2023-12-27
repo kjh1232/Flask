@@ -1,0 +1,15 @@
+CREATE TABLE member (
+    id text,
+    pwd text
+
+);
+
+
+
+CREATE TABLE my_table (
+    num INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(20) NOT NULL, 
+    context TEXT, 
+    title VARCHAR(20) NOT NULL,
+    CONSTRAINT my_table_PK PRIMARY KEY (num)
+);
